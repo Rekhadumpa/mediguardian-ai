@@ -1,0 +1,291 @@
+[
+  {
+    "name": "Common Cold",
+    "symptoms": [
+      "cough",
+      "runny nose",
+      "sore throat",
+      "sneezing"
+    ],
+    "causes": "Viral infection.",
+    "foods": [
+      "Warm soup",
+      "Citrus fruits",
+      "Warm water"
+    ],
+    "avoid": [
+      "Cold drinks",
+      "Junk food"
+    ],
+    "precautions": [
+      "Rest",
+      "Stay hydrated",
+      "Wash hands frequently"
+    ]
+  },
+  {
+    "name": "Influenza",
+    "symptoms": [
+      "fever",
+      "cough",
+      "body pain",
+      "headache",
+      "fatigue"
+    ],
+    "causes": "Influenza virus.",
+    "foods": [
+      "Soup",
+      "Water",
+      "Fruits"
+    ],
+    "avoid": [
+      "Alcohol",
+      "Processed food"
+    ],
+    "precautions": [
+      "Rest",
+      "Drink fluids"
+    ]
+  },
+  {
+    "name": "Dengue",
+    "symptoms": [
+      "high fever",
+      "headache",
+      "joint pain",
+      "rash"
+    ],
+    "causes": "Mosquito-borne viral infection.",
+    "foods": [
+      "Papaya leaf juice",
+      "Coconut water",
+      "Pomegranate"
+    ],
+    "avoid": [
+      "Oily food",
+      "Spicy food"
+    ],
+    "precautions": [
+      "Stay hydrated",
+      "Mosquito protection"
+    ]
+  },
+  {
+    "name": "Malaria",
+    "symptoms": [
+      "fever",
+      "chills",
+      "vomiting",
+      "sweating"
+    ],
+    "causes": "Mosquito parasite.",
+    "foods": [
+      "Light meals",
+      "Water"
+    ],
+    "avoid": [
+      "Alcohol"
+    ],
+    "precautions": [
+      "Use mosquito nets"
+    ]
+  },
+  {
+    "name": "Typhoid",
+    "symptoms": [
+      "fever",
+      "weakness",
+      "stomach pain",
+      "headache"
+    ],
+    "causes": "Salmonella bacteria.",
+    "foods": [
+      "Rice",
+      "Curd",
+      "Boiled vegetables"
+    ],
+    "avoid": [
+      "Street food"
+    ],
+    "precautions": [
+      "Drink clean water"
+    ]
+  },
+  {
+    "name": "Diabetes",
+    "symptoms": [
+      "frequent urination",
+      "increased thirst",
+      "weight loss",
+      "fatigue"
+    ],
+    "causes": "High blood sugar.",
+    "foods": [
+      "Whole grains",
+      "Vegetables"
+    ],
+    "avoid": [
+      "Sugary drinks"
+    ],
+    "precautions": [
+      "Exercise regularly"
+    ]
+  },
+  {
+    "name": "Hypertension",
+    "symptoms": [
+      "headache",
+      "dizziness",
+      "blurred vision"
+    ],
+    "causes": "High blood pressure.",
+    "foods": [
+      "Fruits",
+      "Vegetables"
+    ],
+    "avoid": [
+      "High salt"
+    ],
+    "precautions": [
+      "Exercise",
+      "Reduce salt intake"
+    ]
+  },
+  {
+    "name": "Asthma",
+    "symptoms": [
+      "cough",
+      "wheezing",
+      "difficulty breathing"
+    ],
+    "causes": "Airway inflammation.",
+    "foods": [
+      "Fresh fruits"
+    ],
+    "avoid": [
+      "Smoke"
+    ],
+    "precautions": [
+      "Avoid allergens"
+    ]
+  },
+  {
+    "name": "Food Poisoning",
+    "symptoms": [
+      "vomiting",
+      "diarrhea",
+      "stomach pain"
+    ],
+    "causes": "Contaminated food.",
+    "foods": [
+      "ORS",
+      "Rice",
+      "Banana"
+    ],
+    "avoid": [
+      "Spicy food"
+    ],
+    "precautions": [
+      "Eat hygienic food"
+    ]
+  },
+  {
+    "name": "Migraine",
+    "symptoms": [
+      "headache",
+      "nausea",
+      "light sensitivity"
+    ],
+    "causes": "Neurological condition.",
+    "foods": [
+      "Water"
+    ],
+    "avoid": [
+      "Caffeine"
+    ],
+    "precautions": [
+      "Sleep well"
+    ]
+  }
+  ,
+{
+  "name": "COVID-19",
+  "symptoms": ["fever", "cough", "loss of smell", "fatigue"],
+  "causes": "Coronavirus infection.",
+  "foods": ["Warm fluids", "Fruits", "Protein-rich foods"],
+  "avoid": ["Cold drinks"],
+  "precautions": ["Wear a mask", "Rest", "Stay hydrated"]
+},
+{
+  "name": "Pneumonia",
+  "symptoms": ["fever", "cough", "difficulty breathing", "chest pain"],
+  "causes": "Lung infection.",
+  "foods": ["Soup", "Water"],
+  "avoid": ["Smoking"],
+  "precautions": ["Complete prescribed treatment"]
+},
+{
+  "name": "Chickenpox",
+  "symptoms": ["fever", "rash", "itching"],
+  "causes": "Varicella virus.",
+  "foods": ["Soft foods", "Plenty of fluids"],
+  "avoid": ["Spicy food"],
+  "precautions": ["Avoid scratching", "Isolate until recovered"]
+},
+{
+  "name": "Tuberculosis",
+  "symptoms": ["persistent cough", "weight loss", "fever", "night sweats"],
+  "causes": "Bacterial infection.",
+  "foods": ["Protein-rich foods", "Milk"],
+  "avoid": ["Smoking"],
+  "precautions": ["Complete medication course"]
+},
+{
+  "name": "Anemia",
+  "symptoms": ["fatigue", "dizziness", "weakness"],
+  "causes": "Low red blood cell count.",
+  "foods": ["Spinach", "Dates", "Iron-rich foods"],
+  "avoid": ["Excess tea with meals"],
+  "precautions": ["Regular health checkups"]
+},
+{
+  "name": "Kidney Stones",
+  "symptoms": ["back pain", "vomiting", "blood in urine"],
+  "causes": "Mineral deposits in kidneys.",
+  "foods": ["Water", "Citrus fruits"],
+  "avoid": ["High salt foods"],
+  "precautions": ["Stay hydrated"]
+},
+{
+  "name": "Gastritis",
+  "symptoms": ["stomach pain", "nausea", "bloating"],
+  "causes": "Inflammation of the stomach lining.",
+  "foods": ["Rice", "Bananas"],
+  "avoid": ["Spicy foods", "Alcohol"],
+  "precautions": ["Eat smaller meals"]
+},
+{
+  "name": "Sinusitis",
+  "symptoms": ["headache", "runny nose", "facial pain"],
+  "causes": "Sinus infection.",
+  "foods": ["Warm soup", "Water"],
+  "avoid": ["Dust", "Smoke"],
+  "precautions": ["Steam inhalation"]
+},
+{
+  "name": "Conjunctivitis",
+  "symptoms": ["red eyes", "itchy eyes", "watery eyes"],
+  "causes": "Eye infection or allergy.",
+  "foods": ["Vitamin C-rich foods"],
+  "avoid": ["Touching eyes"],
+  "precautions": ["Wash hands frequently"]
+},
+{
+  "name": "Dehydration",
+  "symptoms": ["thirst", "dizziness", "dry mouth", "fatigue"],
+  "causes": "Loss of body fluids.",
+  "foods": ["ORS", "Water", "Coconut water"],
+  "avoid": ["Alcohol"],
+  "precautions": ["Drink enough fluids"]
+}
+]
