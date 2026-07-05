@@ -1,86 +1,299 @@
-# mediguardian-ai
+# 🩺 MediGuardian AI
 
-Simple ReAct agent
-Agent generated with `agents-cli` version `0.5.0`
+> AI-powered healthcare assistant built using **Google Agent Development Kit (ADK)** and **Gemini 2.5 Flash Lite**.
 
-## Project Structure
+MediGuardian AI is an intelligent healthcare assistant that helps users understand possible medical conditions based on their symptoms, provides educational disease information, recommends suitable foods, suggests precautions, and detects emergency situations.
+
+⚠️ **Disclaimer:** This project is for educational purposes only. It does **NOT** provide medical diagnoses or replace professional medical advice.
+
+---
+
+# 🚀 Features
+
+✅ Symptom Analysis
+
+- Analyze user symptoms
+- Suggest possible medical conditions
+- Uses a structured disease knowledge base
+- Returns the top matching conditions
+
+---
+
+✅ Disease Information
+
+Ask questions like:
+
+- Tell me about Dengue
+- What is Diabetes?
+- Foods for Typhoid
+
+Provides:
+
+- Causes
+- Symptoms
+- Recommended Foods
+- Foods to Avoid
+- Precautions
+
+---
+
+✅ Personalized Health Recommendations
+
+Based on detected conditions:
+
+- 🥗 Foods to eat
+- 🚫 Foods to avoid
+- 💧 Hydration advice
+- 🛌 Rest recommendations
+- 🩺 General health precautions
+
+---
+
+✅ Emergency Detection
+
+Detects serious symptoms like:
+
+- Chest pain
+- Difficulty breathing
+- Stroke symptoms
+- Heavy bleeding
+- Heart attack symptoms
+
+Immediately advises users to seek emergency medical care.
+
+---
+
+# 🏗️ System Architecture
+
+```text
+                         👤 User
+                           │
+                           ▼
+                MediGuardian AI (Root Agent)
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+          ▼                ▼                ▼
+   🩺 Symptoms       📚 Disease Info    🚨 Emergency
+      Agent              Agent             Agent
+          │                │                │
+          └────────────────┼────────────────┘
+                           │
+                           ▼
+              📖 Disease Knowledge Base
+                    (JSON Database)
+                           │
+                           ▼
+                🤖 Gemini 2.5 Flash Lite
+                           │
+                           ▼
+                  ✅ Personalized Response
+```
+
+# 🧠 Tech Stack
+
+- Python
+- Google Agent Development Kit (ADK)
+- Gemini 2.5 Flash Lite
+- JSON Knowledge Base
+- FastAPI
+- UV Package Manager
+
+---
+
+# 📂 Project Structure
 
 ```
 mediguardian-ai/
-├── app/         # Core agent code
-│   ├── agent.py               # Main agent logic
-│   └── app_utils/             # App utilities and helpers
-├── tests/                     # Unit, integration, and load tests
-├── GEMINI.md                  # AI-assisted development guide
-└── pyproject.toml             # Project dependencies
+
+├── app/
+│   ├── agent.py
+│   ├── router.py
+│   ├── symptoms.py
+│   ├── disease_info.py
+│   ├── emergency.py
+│   ├── safety.py
+│   │
+│   ├── app_utils/
+│   │     └── disease_loader.py
+│   │
+│   └── data/
+│         └── diseases.json
+│
+├── tests/
+├── README.md
+└── pyproject.toml
 ```
 
-> 💡 **Tip:** Use [Gemini CLI](https://github.com/google-gemini/gemini-cli) for AI-assisted development - project context is pre-configured in `GEMINI.md`.
+---
 
-## Requirements
+# 📚 Knowledge Base
 
-Before you begin, ensure you have:
-- **uv**: Python package manager (used for all dependency management in this project) - [Install](https://docs.astral.sh/uv/getting-started/installation/) ([add packages](https://docs.astral.sh/uv/concepts/dependencies/) with `uv add <package>`)
-- **agents-cli**: Agents CLI - Install with `uv tool install google-agents-cli`
-- **Google Cloud SDK**: For GCP services - [Install](https://cloud.google.com/sdk/docs/install)
+The application currently contains a structured JSON medical knowledge base with diseases including:
 
+- Influenza
+- Dengue
+- Malaria
+- Typhoid
+- COVID-19
+- Pneumonia
+- Asthma
+- Diabetes
+- Hypertension
+- Migraine
+- Chickenpox
+- Tuberculosis
+- Sinusitis
+- Common Cold
+- Dehydration
+- Conjunctivitis
+- and more...
 
-## Quick Start
+---
 
-Install `agents-cli` and its skills if not already installed:
+# 💬 Example Queries
+
+### Symptom Analysis
+
+Input
+
+```
+I have fever and headache
+```
+
+Output
+
+- Possible Conditions
+- Recommended Foods
+- Foods to Avoid
+- Precautions
+
+---
+
+### Disease Information
+
+Input
+
+```
+Tell me about Dengue
+```
+
+Output
+
+- Causes
+- Symptoms
+- Foods
+- Foods to Avoid
+- Precautions
+
+---
+
+### Emergency Detection
+
+Input
+
+```
+I have chest pain and difficulty breathing
+```
+
+Output
+
+```
+🚨 Possible Medical Emergency
+
+Please seek immediate medical attention.
+
+Call your local emergency services immediately.
+
+Do NOT rely on AI during emergencies.
+```
+
+---
+
+# ▶️ Installation
+
+Clone the repository
 
 ```bash
-uvx google-agents-cli setup
+git clone https://github.com/Rekhadumpa/mediguardian-ai.git
 ```
 
-Install required packages:
+Move into the project
+
+```bash
+cd mediguardian-ai
+```
+
+Install dependencies
 
 ```bash
 agents-cli install
 ```
 
-Test the agent with a local web server:
+Run the application
 
 ```bash
-agents-cli playground
+uv run adk web
 ```
 
-You can also use features from the [ADK](https://adk.dev/) CLI with `uv run adk`.
+Open
 
-## Commands
-
-| Command              | Description                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------- |
-| `agents-cli install` | Install dependencies using uv                                                         |
-| `agents-cli playground` | Launch local development environment                                                  |
-| `agents-cli lint`    | Run code quality checks                                                               |
-| `agents-cli eval`    | Evaluate agent behavior (generate, grade, analyze, and more — see `agents-cli eval --help`) |
-| `uv run pytest tests/unit tests/integration` | Run unit and integration tests                                                        |
-
-## 🛠️ Project Management
-
-| Command | What It Does |
-|---------|--------------|
-| `agents-cli scaffold enhance` | Add CI/CD pipelines and Terraform infrastructure |
-| `agents-cli infra cicd` | One-command setup of entire CI/CD pipeline + infrastructure |
-| `agents-cli scaffold upgrade` | Auto-upgrade to latest version while preserving customizations |
+```
+http://127.0.0.1:8000/dev-ui
+```
 
 ---
 
-## Development
+# 🔬 Testing
 
-Edit your agent logic in `app/agent.py` and test with `agents-cli playground` - it auto-reloads on save.
+Try these sample prompts:
 
-## Deployment
-
-```bash
-gcloud config set project <your-project-id>
-agents-cli deploy
+```
+I have fever and headache
 ```
 
-To add CI/CD and Terraform, run `agents-cli scaffold enhance`.
-To set up your production infrastructure, run `agents-cli infra cicd`.
+```
+I have cough and chest pain
+```
 
-## Observability
+```
+Tell me about Dengue
+```
 
-Built-in telemetry exports to Cloud Trace, BigQuery, and Cloud Logging.
+```
+Foods for Diabetes
+```
+
+```
+I have difficulty breathing
+```
+
+---
+
+# 🌟 Future Improvements
+
+- 🎤 Voice-based interaction
+- 🌍 Multi-language support
+- 📍 Nearby hospital finder
+- 💊 Medicine reminder
+- 📅 Appointment scheduling
+- 📈 Health history tracking
+- 📱 Mobile application
+
+---
+## 🎯 Project
+
+Developed as a **Kaggle Capstone Project** using the **Google Agent Development Kit (ADK)** and **Gemini 2.5 Flash Lite** to build an AI-powered healthcare assistant capable of symptom analysis, disease information retrieval, emergency detection, and personalized health recommendations.
+## 👩‍💻 Author
+
+**Rekha Dumpa**
+
+B.Tech Computer Science Student
+
+Developed as part of the **Google Agent Development Kit (ADK) Kaggle Capstone Project**.
+
+# 📄 License
+
+This project is intended for educational and hackathon purposes.
+
+Medical information provided by the application should not be considered professional medical advice.
