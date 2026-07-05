@@ -89,7 +89,19 @@ Immediately advises users to seek emergency medical care.
                            ▼
                   ✅ Personalized Response
 ```
+## 📸 Screenshots
 
+### 🏠 Home
+![Home](screenshots/home.png)
+
+### 🤒 Symptom Analysis
+![Symptoms](screenshots/Symptoms.png)
+
+### 🩺 Disease Information
+![Disease Information](screenshots/Disease_Information.png)
+
+### 🚨 Emergency Detection
+![Emergency Detection](screenshots/Emergency_Detection.png)
 # 🧠 Tech Stack
 
 - Python
