@@ -63,23 +63,32 @@ Immediately advises users to seek emergency medical care.
 
 ---
 
-# 🏗️ Architecture
+# 🏗️ System Architecture
 
+```text
+                         👤 User
+                           │
+                           ▼
+                MediGuardian AI (Root Agent)
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+          ▼                ▼                ▼
+   🩺 Symptoms       📚 Disease Info    🚨 Emergency
+      Agent              Agent             Agent
+          │                │                │
+          └────────────────┼────────────────┘
+                           │
+                           ▼
+              📖 Disease Knowledge Base
+                    (JSON Database)
+                           │
+                           ▼
+                🤖 Gemini 2.5 Flash Lite
+                           │
+                           ▼
+                  ✅ Personalized Response
 ```
-                      MediGuardian AI
-                              │
-                    Root ADK Agent
-                              │
-        ┌────────────┬──────────────┬──────────────┐
-        │            │              │
- Symptoms Agent  Disease Agent  Emergency Agent
-        │            │              │
-        └────────────┴──────────────┘
-                     │
-          Disease Knowledge Base (JSON)
-```
-
----
 
 # 🧠 Tech Stack
 
@@ -272,16 +281,16 @@ I have difficulty breathing
 - 📱 Mobile application
 
 ---
+## 🎯 Project
 
-# 👩‍💻 Developed By
+Developed as a **Kaggle Capstone Project** using the **Google Agent Development Kit (ADK)** and **Gemini 2.5 Flash Lite** to build an AI-powered healthcare assistant capable of symptom analysis, disease information retrieval, emergency detection, and personalized health recommendations.
+## 👩‍💻 Author
 
 **Rekha Dumpa**
 
-B.Tech CSE Student
+B.Tech Computer Science Student
 
-Built using **Google Agent Development Kit (ADK)** for the **Google ADK Hackathon 2026**.
-
----
+Developed as part of the **Google Agent Development Kit (ADK) Kaggle Capstone Project**.
 
 # 📄 License
 
